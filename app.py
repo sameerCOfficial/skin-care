@@ -8,6 +8,8 @@ def home():
 @app.route("/list")
 def list():
     return render_template("list.html")
-@app.route("/filter")
-def filter():
-    return render_template("filter.html")
+@app.route("/about")
+def about():
+    return render_template("about.html")
+if __name__ == "__main__":
+    app.run(port=8000, debug=True)

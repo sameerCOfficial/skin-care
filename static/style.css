@@ -71,26 +71,47 @@ injected stylesheet
 :host, :root {
     --rem: 16;
 }
-user agent stylesheet
-:root {
-    --arc-palette-background: #0A0D4BFF;
-    --arc-palette-cutoutColor: #212AFBFF;
-    --arc-palette-minContrastColor: #212AFBFF;
-    --arc-palette-hover: #5D64FB7A;
-    --arc-palette-title: #DEDFFDFF;
-    --arc-background-gradient-color0: #01021EFF;
-    --arc-background-gradient-color1: #17011EFF;
-    --arc-palette-focus: #4D54FBCE;
-    --arc-palette-foregroundSecondary: #8489FBFF;
-    --arc-palette-subtitle: #76777FFF;
-    --arc-palette-foregroundPrimary: #ECEDFEFF;
-    --arc-palette-foregroundTertiary: #3139FBFF;
-    --arc-palette-backgroundExtra: #050625FF;
-    --arc-palette-maxContrastColor: #ECEDFEFF;
+body {
+    background: #e3f2fd
+  }
+  
+  svg {
+    font-family: 'Russo One', sans-serif;
+    position: absolute; 
+    width: 100%; height: 100%;
+  }
+  svg text {
+    text-transform: uppercase;
+    animation: stroke 5s;
+    stroke-width: 3;
+    stroke: rgba(54,95,160,1);
+    font-size: 140px;
+    fill:#e3f2fd
+
+  }
+  @keyframes stroke {
+    0% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: rgba(54, 95, 160, 1);
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
+    }
+    70% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: rgba(54, 95, 160, 1);
+    }
+    80% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: rgba(54, 95, 160, 1);
+        stroke-width: 3;
+    }
+    100% {
+        fill: #e3f2fd;
+        stroke: rgba(54, 95, 160, 1); 
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 3; 
+    }
 }
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-*, ::after, ::before {
-    box-sizing: border-box;
-}
+
