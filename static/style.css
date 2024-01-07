@@ -112,20 +112,20 @@ body {
   }
 }
 .form-container {
-  text-align: center; /* Center the form */
-  margin-top: 500px; /* Adjust the top margin as needed */
-  margin-bottom: 300px; /* Increase the bottom margin */
+  text-align: center;
+  margin-top: 500px;
+  margin-bottom: 300px;
 }
 
 form {
-  margin-top: 20px; /* Adjust the top margin inside the form */
+  margin-top: 20px;
 }
 
 .form-container h1 {
   font-family: 'Russo One', sans-serif;
   color: transparent; 
-  -webkit-text-stroke: 2px rgba(54, 95, 160, 1); /* Stroke color and width */
+  -webkit-text-stroke: 2px rgba(54, 95, 160, 1); 
 }
 .custom-select {
-  width: 200px; /* Adjust the width as needed */
+  width: 200px;
 }
