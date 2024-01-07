@@ -12,15 +12,15 @@
 <div class="down-arrow"></div>
 <div class="form-container">
   <h1>Find the best product for you</h1>
-  <form>
-    <select class="custom-select">
+  <form actions="/home"method="post" >
+    <select class="custom-select" name="product_type">
       <option selected>Product Type</option>
       <option value="Cleanser">Cleanser</option>
       <option value="Moisturizer">Moisturizer</option>
       <option value="Toner">Toner</option>
       <option value="Serum">Serum</option>
     </select>
-    <select class="custom-select">
+    <select class="custom-select" name="skin_type">
       <option selected>Skin Type</option>
       <option value="Dry">Dry</option>
       <option value="Normal">Normal</option>
