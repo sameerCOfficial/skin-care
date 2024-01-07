@@ -5,9 +5,8 @@ body {
   
   svg {
     font-family: 'Russo One', sans-serif;
-    margin-top:150px;
-    margin-left:-225px;
-    width: 150%;
+    margin-top: 150px;
+    width: 100%;
   }
   svg text {
     text-transform: uppercase;
@@ -57,9 +56,9 @@ body {
   .down-arrow:after {
     content: " ";
     position: absolute;
-    top: 10px; /* Adjust vertical position of the arrow */
-    left: 50%; /* Centering the arrow */
-    transform: translateX(-50%) rotateZ(45deg); /* Centering and rotating the arrow */
+    top: 10px; 
+    left: 50%; 
+    transform: translateX(-50%) rotateZ(45deg); 
     width: 16px;
     height: 16px;
     border-bottom: 4px solid;
@@ -67,30 +66,6 @@ body {
     border-radius: 4px;
   }
   
-  @keyframes jumpInfinite {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-  
-  
-  @keyframes jumpInfinite {
-    0% {
-      margin-top: 0;
-    }
-    50% {
-      margin-top: 20px;
-    }
-    100% {
-      margin-top: 0;
-    }
-  }
   .nav-item a {
     font-family: 'Russo One', sans-serif;
     color: #303030;
@@ -100,4 +75,57 @@ body {
 .nav-link{
   font-family: 'Russo One', sans-serif;
 }
-  
+@keyframes fade {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.subheader p {
+  animation: fade 7s;
+}
+
+@keyframes jumpInfinite {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes jumpInfinite {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+.form-container {
+  text-align: center; /* Center the form */
+  margin-top: 500px; /* Adjust the top margin as needed */
+  margin-bottom: 300px; /* Increase the bottom margin */
+}
+
+form {
+  margin-top: 20px; /* Adjust the top margin inside the form */
+}
+
+.form-container h1 {
+  font-family: 'Russo One', sans-serif;
+  color: transparent; 
+  -webkit-text-stroke: 2px rgba(54, 95, 160, 1); /* Stroke color and width */
+}
+.custom-select {
+  width: 200px; /* Adjust the width as needed */
+}
