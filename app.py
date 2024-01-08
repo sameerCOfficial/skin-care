@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, redirect, request, render_template
 import sqlalchemy as db
 from sqlalchemy import text
 
@@ -10,6 +10,8 @@ def home():
     if request.method == 'POST':
         product_type = request.form.get('product_type') 
         skin_type = request.form.get('skin_type')
+        if product_type == "Product Type" and skin_type == "Skin Type":
+            return redirect('/list')
         
         connection = engine.connect()
         query = text("SELECT product_type, skin_type, brand, name, price FROM face_product WHERE product_type LIKE :product_type AND (skin_type LIKE :skin_type OR skin_type LIKE '%All%')")
