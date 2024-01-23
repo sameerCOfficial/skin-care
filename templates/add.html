@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% set active_page = request.path[1:] %}
+{% block title %}Home - SkinCare.io{% endblock %}
+{% block content %} 
+<h1>Add your own products</h1>
+<div class="addform">
+    <form actions="/add"method="get" >
+        <select class="custom-select" name="product_type">
+            <option selected>Product Type</option>
+            <option value="Cleanser">Cleanser</option>
+            <option value="Moisturizer">Moisturizer</option>
+            <option value="Toner">Toner</option>
+            <option value="Serum">Serum</option>
+        </select>
+        <select class="custom-select" name="skin_type">
+            <option selected>Skin Type</option>
+            <option value="Dry">Dry</option>
+            <option value="Normal">Normal</option>
+            <option value="Sensitive">Sensitive</option>
+            <option value="Combination">Combination</option>
+            <option value="Oily">Oily</option>
+            <option value="Acne-Prone">Acne-Prone</option>
+        </select>
+        <input type="text" id="brand" name="brand" placeholder="Brand">
+        <input type="text" id="productname" name="productname" placeholder="Product Name">
+        <input type="number" id="price" name="price" placeholder="Price">
+        <button type="submit" class="btn btn-light">Submit</button>
+      </form>
+</div>
+  {% endblock %}

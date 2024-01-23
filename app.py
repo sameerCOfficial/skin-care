@@ -41,6 +41,20 @@ def list():
 @app.route("/about")
 def about():
     return render_template("about.html")
+@app.route("/add")
+def add():
+    if request.method == 'GET':
+        product_type = request.form.get('product_type') 
+        skin_type = request.form.get('skin_type')
+        name = request.form.get('productname')
+        price = request.form.get('price')
+        brand = request.form.get('brand')
+        
+        connection = engine.connect()
+        query = text("INSERT INTO face_product (product_type,skin_type,brand,name,price) VALUES (:product_type,:skin_type,:brand,:name,:price)")
+        result = connection.execute(query, {'product_type': f'%{product_type}%', 'skin_type': f'%{skin_type}%', 'name': f'%{name}%', 'brand': f'%{brand}%', 'price': f'%{price}%'})
+
+    return render_template("add.html")
 
 if __name__ == "__main__":
     app.run(port=8000, debug=True)
